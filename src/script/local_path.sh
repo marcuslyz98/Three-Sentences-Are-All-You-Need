@@ -50,12 +50,12 @@ m_seed=32
 config=${data_dir}/local_path/doc_${doc_embed_required}-pos_${pos_dim}-seed_${d_seed}_${m_seed}
 # config=test
 
-python main.py \
-    --gpu_no 0 --doc_mode ${doc_mode} --dataset_seed ${d_seed} --model_seed ${m_seed} --mode train --weight_decay ${l2} \
+python C:/Users/marcu/Documents/GitHub/Three-Sentences-Are-All-You-Need/src/main.py \
+    --gpu_no 1 --doc_mode ${doc_mode} --dataset_seed ${d_seed} --model_seed ${m_seed} --mode train --weight_decay ${l2} \
     --lr ${lr} --topn ${topn} --hidden_size $hs --ner_dim ${ner_dim} --coref_dim ${coref_dim} --pos_dim ${pos_dim} \
-    --data_dir ../dataset/$data_dir --log_path ../log/${config} --model_path ../model/${config} \
-    --pre_trained_embed ../dataset/DocRED_baseline_metadata/glove_100_lower_vec.npy \
-    --max_epoch 1000 --warmup_step 0 --eval_step -1 --save_model 0 \
+    --data_dir C:/Users/marcu/Documents/GitHub/Three-Sentences-Are-All-You-Need/dataset/$data_dir --log_path C:/Users/marcu/Documents/GitHub/Three-Sentences-Are-All-You-Need/log/${config} --model_path C:/Users/marcu/Documents/GitHub/Three-Sentences-Are-All-You-Need/model/${config} \
+    --pre_trained_embed C:/Users/marcu/Documents/GitHub/Three-Sentences-Are-All-You-Need/dataset/DocRED_baseline_metadata/glove_100_lower_vec.npy \
+    --max_epoch 1000 --warmup_step 0 --eval_step -1 --save_model 1 \
     --input_dropout ${indp} --rnn_dropout ${rdp} --mlp_dropout ${mlp_dp} \
     --doc_embed_required ${doc_embed_required} --local_required ${local_required}
 
