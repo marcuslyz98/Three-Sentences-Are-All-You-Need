@@ -230,12 +230,12 @@ def main():
     
     from path_dataset import Dataset
     if args.mode == 'train':
-        '''
+        
         dataset_train = Dataset(os.path.join(args.data_dir, 'small_train'), 97, True, max_entity_pair_num=args.max_entity_pair_num, args=args)
         dataset_valid = Dataset(os.path.join(args.data_dir, 'small_train'), 97, False, args=args)
-        '''
-        dataset_train = Dataset(os.path.join(args.data_dir, 'train'), 97, True, max_entity_pair_num=args.max_entity_pair_num, args=args)
-        dataset_valid = Dataset(os.path.join(args.data_dir, 'dev'), 97, False, args=args)
+        
+        # dataset_train = Dataset(os.path.join(args.data_dir, 'train'), 97, True, max_entity_pair_num=args.max_entity_pair_num, args=args)
+        # dataset_valid = Dataset(os.path.join(args.data_dir, 'dev'), 97, False, args=args)
         # '''
     elif args.mode == 'eval_dev':
         dataset_test = Dataset(os.path.join(args.data_dir, 'dev'), 97,  False, args=args)
