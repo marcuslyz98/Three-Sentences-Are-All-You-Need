@@ -326,13 +326,13 @@ def load_docred_dict(dt_file_path):
 
 if __name__ == '__main__':
     
-    pre_dir = '../../dataset/'
-    post_dir = '../../dataset'
+    pre_dir = 'C:/Users/marcu/Documents/GitHub/Three-Sentences-Are-All-You-Need/dataset/'
+    post_dir = 'C:/Users/marcu/Documents/GitHub/Three-Sentences-Are-All-You-Need/dataset'
     word2id, ner2id, label2id = load_docred_dict(
-        '../../dataset/DocRED_baseline_metadata')
+        'C:/Users/marcu/Documents/GitHub/Three-Sentences-Are-All-You-Need/dataset/DocRED_baseline_metadata')
     
-    if os.path.exists("../../dataset/100_lower-doc-new-path") == False:
-        os.makedirs("../../dataset/100_lower-doc-new-path")
+    if os.path.exists("C:/Users/marcu/Documents/GitHub/Three-Sentences-Are-All-You-Need/dataset/100_lower-doc-new-path") == False:
+        os.makedirs("C:/Users/marcu/Documents/GitHub/Three-Sentences-Are-All-You-Need/dataset/100_lower-doc-new-path")
     
     for ds in ['dev', 'test', 'train']:
         if ds == 'train':
